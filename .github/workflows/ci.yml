@@ -74,6 +74,10 @@ jobs:
         if: hashFiles('ts/package.json') != ''
         working-directory: ts
         run: pnpm build
+      - name: Prepare TypeScript package README
+        if: hashFiles('ts/package.json') != ''
+        working-directory: ts
+        run: rm README.md && cp ../README.md README.md
       - name: TypeScript publish dry run
         if: hashFiles('ts/package.json') != ''
         working-directory: ts
