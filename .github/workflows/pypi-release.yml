@@ -1,0 +1,83 @@
+name: PyPI release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "py/**"
+      - ".github/workflows/pypi-release.yml"
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: pypi-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip release]')
+    runs-on: ubuntu-latest
+    environment: pypi
+    defaults:
+      run:
+        working-directory: py
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: uv sync --dev
+      - name: Check lint
+        run: uv run --with ruff ruff check .
+      - name: Check format
+        run: uv run --with ruff ruff format --check .
+      - name: Check types
+        run: uv run --with ty ty check
+      - name: Test
+        run: uv run --with pytest --with pytest-asyncio python -m pytest
+      - name: Build distribution
+        run: uv build
+      - name: Read package metadata
+        id: package
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import tomllib
+          from pathlib import Path
+
+          project = tomllib.loads(Path("pyproject.toml").read_text())["project"]
+          print(f"name={project['name']}")
+          print(f"version={project['version']}")
+          PY
+      - name: Check published version
+        id: published
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import sys
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          name = "${{ steps.package.outputs.name }}"
+          version = "${{ steps.package.outputs.version }}"
+          url = f"https://pypi.org/pypi/{urllib.parse.quote(name)}/{urllib.parse.quote(version)}/json"
+          try:
+              urllib.request.urlopen(url, timeout=15).close()
+          except urllib.error.HTTPError as error:
+              if error.code == 404:
+                  print("exists=false")
+                  sys.exit(0)
+              raise
+          print("exists=true")
+          PY
+      - name: Report existing version
+        if: steps.published.outputs.exists == 'true'
+        run: echo "${{ steps.package.outputs.name }}==${{ steps.package.outputs.version }} is already published"
+      - name: Publish
+        if: steps.published.outputs.exists == 'false'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: py/dist
