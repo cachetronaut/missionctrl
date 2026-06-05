@@ -1,5 +1,10 @@
 # MissionCtrl
 
+<p align="center">
+  <img src="docs/assets/logo.png" alt="MissionCtrl logo" width="240">
+</p>
+
+
 Local-first MissionCtrl that composes capability tokens, budgets, graph events, and Plugg authentication into one per-action pipeline.
 
 MissionCtrl is a primitive with TypeScript and Python implementations maintained in one public repository. The shared repo keeps the public contract, fixtures, issues, and release history aligned across languages.
