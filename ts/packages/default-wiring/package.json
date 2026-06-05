@@ -1,0 +1,20 @@
+{
+  "name": "@missionctrl/default-wiring",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Internal: local-only default wiring for the MissionCtrl laptop demo.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "biome lint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}

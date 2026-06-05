@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@missionctrl/core": ["packages/core/src/index.ts"],
+      "@missionctrl/default-wiring": ["packages/default-wiring/src/index.ts"],
+      "@approval-surface/core": ["../../approval-surface/ts/packages/core/src/index.ts"],
+      "@approval-surface/local": ["../../approval-surface/ts/packages/local/src/index.ts"],
+      "@nvoke/core": ["../../nvoke/ts/packages/core/src/index.ts"],
+      "@nvoke/registry-local": ["../../nvoke/ts/packages/registry-local/src/index.ts"],
+      "@verdik/core": ["../../verdik/ts/packages/core/src/index.ts"],
+      "@verdik/rules-local": ["../../verdik/ts/packages/rules-local/src/index.ts"],
+      "@plugg/core": ["../../plugg/ts/packages/core/src/index.ts"],
+      "@grantz/core": ["../../grantz/ts/packages/core/src/index.ts"],
+      "@grantz/signer-local": ["../../grantz/ts/packages/signer-local/src/index.ts"],
+      "@grantz/revocation-local": ["../../grantz/ts/packages/revocation-local/src/index.ts"],
+      "@delta-v/core": ["../../deltav/ts/packages/core/src/index.ts"],
+      "@delta-v/store-local": ["../../deltav/ts/packages/store-local/src/index.ts"],
+      "@axiongraph/core": ["../../axiongraph/ts/packages/core/src/index.ts"],
+      "@axiongraph/store-local": ["../../axiongraph/ts/packages/store-local/src/index.ts"]
+    },
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  }
+}

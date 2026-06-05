@@ -1,0 +1,61 @@
+[project]
+name = "missionctrl"
+version = "0.1.0"
+description = "MissionCtrl wiring for Plugg auth, Grantz tokens, DeltaV budgets, and AxionGraph trails."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "cryptography>=42",
+]
+
+[dependency-groups]
+dev = [
+  "psycopg-pool>=3.2",
+  "psycopg[binary]>=3.2",
+  "pytest>=8.4.0",
+  "ruff>=0.11.0",
+  "ty>=0.0.1a8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/missionctrl"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src",
+  "../../approval-surface/py/src",
+  "../../nvoke/py/src",
+  "../../plugg/py/src",
+  "../../verdik/py/src",
+  "../../dockbay/py/src",
+  "../../deltav/py/src",
+  "../../grantz/py/src",
+  "../../axiongraph/py/packages/core/src",
+  "../../axiongraph/py/packages/store-local/src",
+]
+testpaths = ["tests"]
+
+[tool.ty.environment]
+extra-paths = [
+  "src",
+  "../../approval-surface/py/src",
+  "../../nvoke/py/src",
+  "../../plugg/py/src",
+  "../../verdik/py/src",
+  "../../dockbay/py/src",
+  "../../deltav/py/src",
+  "../../grantz/py/src",
+  "../../axiongraph/py/packages/core/src",
+  "../../axiongraph/py/packages/store-local/src",
+]
