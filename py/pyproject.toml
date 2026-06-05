@@ -2,6 +2,7 @@
 name = "missionctrl"
 version = "0.1.0"
 description = "MissionCtrl wiring for Plugg auth, Grantz tokens, DeltaV budgets, and AxionGraph trails."
+readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 dependencies = [
@@ -16,6 +17,11 @@ dev = [
   "ruff>=0.11.0",
   "ty>=0.0.1a8",
 ]
+
+[project.urls]
+Homepage = "https://github.com/cachetronaut/missionctrl"
+Repository = "https://github.com/cachetronaut/missionctrl"
+Issues = "https://github.com/cachetronaut/missionctrl/issues"
 
 [build-system]
 requires = ["hatchling"]

@@ -41,6 +41,8 @@ jobs:
         run: pnpm verify
       - name: Build
         run: pnpm build
+      - name: Prepare package README
+        run: rm README.md && cp ../README.md README.md
       - name: Read package metadata
         id: package
         run: |

@@ -39,6 +39,8 @@ jobs:
         run: uv run --with ty ty check
       - name: Test
         run: uv run --with pytest --with pytest-asyncio python -m pytest
+      - name: Prepare package README
+        run: rm README.md && cp ../README.md README.md
       - name: Build distribution
         run: uv build
       - name: Read package metadata

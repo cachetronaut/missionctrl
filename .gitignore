@@ -14,9 +14,9 @@ __pycache__/
 *.py[cod]
 .legacy-git/
 .pnpm-store/
-/README.md
 /PRODUCT.md
 /STATUS.md
 /docs/plan/
 /PLANNING/
 NAME.md
+
