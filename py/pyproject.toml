@@ -6,7 +6,13 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 dependencies = [
-  "cryptography>=42",
+  "axiongraph>=0.0.5",
+  "deltav>=0.0.0",
+  "grantz>=0.0.0",
+  "launchgate>=0.0.0",
+  "nvoke>=0.0.0",
+  "plugg>=0.0.0",
+  "verdik>=0.0.0",
 ]
 
 [dependency-groups]
@@ -40,7 +46,7 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 [tool.pytest.ini_options]
 pythonpath = [
   "src",
-  "../../approval-surface/py/src",
+  "../../launchgate/py/src",
   "../../nvoke/py/src",
   "../../plugg/py/src",
   "../../verdik/py/src",
@@ -55,7 +61,7 @@ testpaths = ["tests"]
 [tool.ty.environment]
 extra-paths = [
   "src",
-  "../../approval-surface/py/src",
+  "../../launchgate/py/src",
   "../../nvoke/py/src",
   "../../plugg/py/src",
   "../../verdik/py/src",

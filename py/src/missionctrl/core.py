@@ -3,11 +3,11 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from typing import Any, cast
 
-from approval_surface import ApprovalSpec, expire_if_due
-from approval_surface import request as request_approval
-from approval_surface import resolve as resolve_approval
 from deltav import Reservation
 from grantz import Grant, TokenClaims, attenuate, authorize, verify
+from launchgate import ApprovalSpec, expire_if_due
+from launchgate import request as request_approval
+from launchgate import resolve as resolve_approval
 from nvoke import ExecuteContext as ConnectorExecuteContext
 from nvoke import in_process_connector
 from plugg import AuthError, Principal

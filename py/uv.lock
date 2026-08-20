@@ -3,6 +3,15 @@ revision = 3
 requires-python = ">=3.11"
 
 [[package]]
+name = "axiongraph"
+version = "0.0.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1a/bf/c45b894f80537d20315da72cdad3c864f578fbdcfe3d4c46561e7de642e4/axiongraph-0.0.5.tar.gz", hash = "sha256:2b56ddccd13be58c0887319ce802188d19a7e38e3d89cc6e0e1eb8e972612d6b", size = 11740, upload-time = "2026-06-03T22:00:40.566Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/89/b3/09c27db8adbf20e5d219201829ee5c62b7e120d3252d54a8a5315cb9dfaf/axiongraph-0.0.5-py3-none-any.whl", hash = "sha256:934bfec367b382b2d9bf54933a6885f49928035f63ca5bcfd7d0b8c48bc4d761", size = 16002, upload-time = "2026-06-03T22:00:39.555Z" },
+]
+
+[[package]]
 name = "cffi"
 version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -141,6 +150,48 @@ wheels = [
 ]
 
 [[package]]
+name = "deltav"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dockbay" },
+    { name = "psycopg", extra = ["binary"] },
+    { name = "psycopg-pool" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/92/1b/f84276f39cdcbc8acdd9a4078deedcfc111ffc3548af71bc1f46241b146d/deltav-0.0.0.tar.gz", hash = "sha256:779c44af6bdcfea85d52c92ee3ffa8d26bdf319e8f0b1751bfbf86410766e644", size = 20061, upload-time = "2026-06-09T00:56:34.938Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4a/00/137499ef237d698d9b8df9aec37f2129eb2781a9d443b152401dd56ab4af/deltav-0.0.0-py3-none-any.whl", hash = "sha256:9137f1554b24f9ee400344d5050370804c7c89e8346c6be8b512d05ce439979e", size = 9181, upload-time = "2026-06-09T00:56:33.839Z" },
+]
+
+[[package]]
+name = "dockbay"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "psycopg", extra = ["binary"] },
+    { name = "psycopg-pool" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/15/7c/1004de2dee6476d2c74d290c3586f7d28265727148ba10f8fd0b2613495a/dockbay-0.0.0.tar.gz", hash = "sha256:cf2374b390128d16fda5ba3429ef6f9f12e60fe445fc418dffd8991f4f8dc8f1", size = 17481, upload-time = "2026-06-05T21:12:51.905Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a1/6e/701815206658937e75462a022f3a5a230e81c4ece37c326526913f7bead0/dockbay-0.0.0-py3-none-any.whl", hash = "sha256:23f666d8117035e03cb0e95dac399ade34b8c57bc607af8a6d88a015f3ca55da", size = 4659, upload-time = "2026-06-05T21:12:50.608Z" },
+]
+
+[[package]]
+name = "grantz"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cryptography" },
+    { name = "dockbay" },
+    { name = "psycopg", extra = ["binary"] },
+    { name = "psycopg-pool" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0b/5b/001f66622cd33e95627a11fb93293033e9eb1df9b5869d175a4a5bee6c0b/grantz-0.0.0.tar.gz", hash = "sha256:d627422d4ab30c473f202ee8798f1b08094f1c9792e8af32f80801c42a43e51f", size = 28922, upload-time = "2026-06-09T00:56:23.524Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/50/25/6ffd15c83078770534785bf0fd9a815941da24737d5be260d12340de459a/grantz-0.0.0-py3-none-any.whl", hash = "sha256:615518330a1ce2f4b969cdf8395f55f293930ded8fd65144e03dad4a57d0e79d", size = 6215, upload-time = "2026-06-09T00:56:22.523Z" },
+]
+
+[[package]]
 name = "iniconfig"
 version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -150,11 +201,26 @@ wheels = [
 ]
 
 [[package]]
+name = "launchgate"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6f/bd/556db36741fac0755af95ee44aaf233204720dd0056150dd6df767a9f2e0/launchgate-0.0.0.tar.gz", hash = "sha256:4171765930e861f13a25fffc5756056a0dae7b4a2c141f03b43b3eb8be1bdc95", size = 8657, upload-time = "2026-06-09T11:42:55.211Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ca/c8/c550ab6004209442060b8990485b7a0cef695e5de49363c5cb704278e417/launchgate-0.0.0-py3-none-any.whl", hash = "sha256:81f327c989b92507d0b18b837539860049325560f4f5227255738bf6325c92e4", size = 2804, upload-time = "2026-06-09T11:42:53.955Z" },
+]
+
+[[package]]
 name = "missionctrl"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "cryptography" },
+    { name = "axiongraph" },
+    { name = "deltav" },
+    { name = "grantz" },
+    { name = "launchgate" },
+    { name = "nvoke" },
+    { name = "plugg" },
+    { name = "verdik" },
 ]
 
 [package.dev-dependencies]
@@ -167,7 +233,15 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "cryptography", specifier = ">=42" }]
+requires-dist = [
+    { name = "axiongraph", specifier = ">=0.0.5" },
+    { name = "deltav", specifier = ">=0.0.0" },
+    { name = "grantz", specifier = ">=0.0.0" },
+    { name = "launchgate", specifier = ">=0.0.0" },
+    { name = "nvoke", specifier = ">=0.0.0" },
+    { name = "plugg", specifier = ">=0.0.0" },
+    { name = "verdik", specifier = ">=0.0.0" },
+]
 
 [package.metadata.requires-dev]
 dev = [
@@ -179,12 +253,30 @@ dev = [
 ]
 
 [[package]]
+name = "nvoke"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e7/89/432bc2ccefcd9873cbc21e05b1fd93def74a4ee01e0c6f259be23591b526/nvoke-0.0.0.tar.gz", hash = "sha256:80d2760e7b2ce80c24d7c4090a65f45efac54f8e06146fa5957daf53b5880bdf", size = 9111, upload-time = "2026-06-09T11:32:50.787Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/53/59/52566d62ff448113cc49593ed1b08366d346338df1ad0eb54b9633473242/nvoke-0.0.0-py3-none-any.whl", hash = "sha256:978ed7d4977ac5f46e1aef0c3b3df82159f99fabcda876d50f721b063c16a4f5", size = 3312, upload-time = "2026-06-09T11:32:49.677Z" },
+]
+
+[[package]]
 name = "packaging"
 version = "26.2"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz", hash = "sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661", size = 228134, upload-time = "2026-04-24T20:15:23.917Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl", hash = "sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e", size = 100195, upload-time = "2026-04-24T20:15:22.081Z" },
+]
+
+[[package]]
+name = "plugg"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9f/57/ebc8333a90e36c587984a8484ddd79e8c3e5c5c16df5aaa45edd6309ef21/plugg-0.0.0.tar.gz", hash = "sha256:1f9c6dc20ff2ea8a8d1c95ce1abc045a31b99030a300c6b4a2da6973c201c518", size = 7769, upload-time = "2026-06-05T21:09:55.689Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c4/0d/1c5251f402a87b8c673ed75fc134f683a50aa0015f802a7ab5bdbaade1be/plugg-0.0.0-py3-none-any.whl", hash = "sha256:9e4a0c857e64ddf4d23a2a06e5b410402170bf613192e077ec7c3d8f4bd396e4", size = 2040, upload-time = "2026-06-05T21:09:54.502Z" },
 ]
 
 [[package]]
@@ -377,4 +469,13 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/ba/19/1b9b0e29f30c6d35cb345486df41110984ea67ae69dddbc0e8a100999493/tzdata-2026.2.tar.gz", hash = "sha256:9173fde7d80d9018e02a662e168e5a2d04f87c41ea174b139fbef642eda62d10", size = 198254, upload-time = "2026-04-24T15:22:08.651Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ce/e4/dccd7f47c4b64213ac01ef921a1337ee6e30e8c6466046018326977efd95/tzdata-2026.2-py2.py3-none-any.whl", hash = "sha256:bbe9af844f658da81a5f95019480da3a89415801f6cc966806612cc7169bffe7", size = 349321, upload-time = "2026-04-24T15:22:05.876Z" },
+]
+
+[[package]]
+name = "verdik"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/5c/4d/47639597fb37ea167009b94bbf681d639196c907b790aff7263e93015cd6/verdik-0.0.0.tar.gz", hash = "sha256:4cae6db948257e4645099a0ae765f8f9855e23e6bca779f7f5941840e82963c0", size = 9662, upload-time = "2026-06-09T00:56:02.25Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/57/3a/7defd700f6b9a15e2a5e32cf7f7cd2b83ea74f9991e92e92733230bfb79e/verdik-0.0.0-py3-none-any.whl", hash = "sha256:64442af5e8ce7b8882915e151bfdae79eeaaa9d4ea34f7658f91ced3bee8ba1c", size = 3451, upload-time = "2026-06-09T00:56:00.825Z" },
 ]
