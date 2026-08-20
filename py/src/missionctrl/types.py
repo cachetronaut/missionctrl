@@ -3,10 +3,10 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Literal, Protocol, TypedDict
 
-from approval_surface import Approval
 from axiongraph_core import GraphStore
 from deltav import BudgetStore, Reservation, SpendRequest, UsageMap
 from grantz import Grant, LocalKeyPair, Scope, TokenClaims
+from launchgate import Approval
 from plugg import AuthAdapter, Principal
 
 DecisionStage = Literal["authenticate", "authorize", "reserve", "execute", "settle"]

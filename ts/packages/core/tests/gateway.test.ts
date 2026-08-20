@@ -1,4 +1,3 @@
-import { InMemoryPendingStore, RecordingApprovalChannel } from '@approval-surface/local';
 import { InMemoryStore } from '@axiongraph/store-local';
 import { InMemoryBudgetStore } from '@delta-v/store-local';
 import { mint } from '@grantz/core';
@@ -7,6 +6,7 @@ import {
   Ed25519LocalVerifier,
   generateLocalKeyPair,
 } from '@grantz/signer-local';
+import { InMemoryPendingStore, RecordingApprovalChannel } from '@launchgate/local';
 import { describe, expect, it } from 'vitest';
 import type { Executor, GatewayRequest } from '../src/index';
 import { createGateway } from '../src/index';

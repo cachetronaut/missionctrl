@@ -1,11 +1,11 @@
-import type { ApprovalSpec } from '@approval-surface/core';
+import type { Reservation } from '@delta-v/core';
+import { attenuate as attenuateToken, authorize, verify } from '@grantz/core';
+import type { ApprovalSpec } from '@launchgate/core';
 import {
   expireIfDue,
   request as requestApproval,
   resolve as resolveApproval,
-} from '@approval-surface/core';
-import type { Reservation } from '@delta-v/core';
-import { attenuate as attenuateToken, authorize, verify } from '@grantz/core';
+} from '@launchgate/core';
 import { GraphRecorder } from './graph.js';
 import type {
   ApprovalResolution,

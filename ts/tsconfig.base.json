@@ -8,8 +8,8 @@
     "paths": {
       "@missionctrl/core": ["packages/core/src/index.ts"],
       "@missionctrl/default-wiring": ["packages/default-wiring/src/index.ts"],
-      "@approval-surface/core": ["../../approval-surface/ts/packages/core/src/index.ts"],
-      "@approval-surface/local": ["../../approval-surface/ts/packages/local/src/index.ts"],
+      "@launchgate/core": ["../../launchgate/ts/packages/core/src/index.ts"],
+      "@launchgate/local": ["../../launchgate/ts/packages/local/src/index.ts"],
       "@nvoke/core": ["../../nvoke/ts/packages/core/src/index.ts"],
       "@nvoke/registry-local": ["../../nvoke/ts/packages/registry-local/src/index.ts"],
       "@verdik/core": ["../../verdik/ts/packages/core/src/index.ts"],

@@ -1,12 +1,7 @@
-import type {
-  Approval,
-  ApprovalChannel,
-  ApprovalDecision,
-  PendingStore,
-} from '@approval-surface/core';
 import type { GraphStore } from '@axiongraph/core';
 import type { BudgetStore, Reservation, Spend, SpendRequest, UsageMap } from '@delta-v/core';
 import type { AuthorizationRequest, Narrowing, Signer, TokenClaims, Verifier } from '@grantz/core';
+import type { Approval, ApprovalChannel, ApprovalDecision, PendingStore } from '@launchgate/core';
 import type { AuthAdapter, Principal } from '@plugg/core';
 
 export type DecisionStage = 'authenticate' | 'authorize' | 'reserve' | 'execute' | 'settle';

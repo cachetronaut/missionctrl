@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import asyncio
 
-from approval_surface import InMemoryPendingStore, RecordingApprovalChannel
 from axiongraph_store_local import InMemoryStore
 from deltav import Budget, InMemoryBudgetStore, SpendRequest
 from grantz import generate_local_key_pair, mint
+from launchgate import InMemoryPendingStore, RecordingApprovalChannel
 from plugg import Principal
 
 from missionctrl import (

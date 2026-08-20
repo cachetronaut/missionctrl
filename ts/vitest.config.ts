@@ -11,11 +11,11 @@ export default defineConfig({
       '@missionctrl/surface-http': fileURLToPath(
         new URL('packages/surface-http/src/index.ts', import.meta.url),
       ),
-      '@approval-surface/core': fileURLToPath(
-        new URL('../../approval-surface/ts/packages/core/src/index.ts', import.meta.url),
+      '@launchgate/core': fileURLToPath(
+        new URL('../../launchgate/ts/packages/core/src/index.ts', import.meta.url),
       ),
-      '@approval-surface/local': fileURLToPath(
-        new URL('../../approval-surface/ts/packages/local/src/index.ts', import.meta.url),
+      '@launchgate/local': fileURLToPath(
+        new URL('../../launchgate/ts/packages/local/src/index.ts', import.meta.url),
       ),
       '@nvoke/core': fileURLToPath(
         new URL('../../nvoke/ts/packages/core/src/index.ts', import.meta.url),

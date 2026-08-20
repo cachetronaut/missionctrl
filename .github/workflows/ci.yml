@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Checkout approval-surface sibling
-        run: git clone --depth 1 https://github.com/cachetronaut/approval-surface.git ../approval-surface
+      - name: Checkout launchgate sibling
+        run: git clone --depth 1 https://github.com/cachetronaut/launchgate.git ../launchgate
       - name: Checkout nvoke sibling
         run: git clone --depth 1 https://github.com/cachetronaut/nvoke.git ../nvoke
       - name: Checkout plugg sibling
@@ -38,8 +38,8 @@ jobs:
           node-version: 24
           cache: pnpm
           cache-dependency-path: ts/pnpm-lock.yaml
-      - name: Install approval-surface TypeScript dependencies
-        working-directory: ../approval-surface/ts
+      - name: Install launchgate TypeScript dependencies
+        working-directory: ../launchgate/ts
         run: pnpm install --frozen-lockfile
       - name: Install nvoke TypeScript dependencies
         working-directory: ../nvoke/ts
